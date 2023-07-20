@@ -4,15 +4,25 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
   <div style="text-align: center;">
-    <h1>Welcome to {{title}}</h1>
+    <h1 class="txt">Welcome to {{title}}</h1>
     <h1 class="stg">Mohith</h1>
     <h1 [class] = "classclo">Mohith</h1>
     <h1 class="sti" [class] = "classclo">Mohith</h1>
     <h1 [class.str] = "hasError">Mohith</h1>
     <h1 [ngClass] = "objclas">Mohith</h1>
+    <h1 class="txt">Mohith</h1>
   </div>
   `,
   styles: [`
+  h1.txt{
+    color: aqua;
+    font-weight: 100px;
+  }
+  h1.txt:hover{
+    color: springgreen;
+    font-style: oblique;
+    font-size: 50px;
+}
   .stg{
     color: green;
   }
