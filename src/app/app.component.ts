@@ -1,10 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <h1 class="stg">Mohith</h1>
+    <h1 [class] = "classclo">Mohith</h1>
+    <h1 class="sti" [class] = "classclo">Mohith</h1>
+    <h1 [class.str] = "hasError">Mohith</h1>
+    <h1 [ngClass] = "objclas">Mohith</h1>
+
+  `,
+  styles: [`
+  .stg{
+    color: green;
+  }
+  .str{
+    color: red;
+  }
+  .sti{
+    font-style: italic;
+  }
+  `]
 })
-export class AppComponent {
-  title = 'class-binding';
+export class AppComponent implements OnInit{
+  
+  public title = 'class-binding';
+  public classclo = "str";
+  public hasError = true;
+
+  public objclas = {
+      "stg": this.hasError,
+    "str": !this.hasError,
+    "sti": this.hasError
+  }
+  
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 }
