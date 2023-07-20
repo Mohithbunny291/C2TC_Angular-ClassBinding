@@ -1,0 +1,9 @@
+h1.txt{
+    color: aqua;
+    font-weight: 100;
+}
+h1.txt:hover{
+    color: springgreen;
+    font-style: oblique;
+    font-size: 1000px;
+}
