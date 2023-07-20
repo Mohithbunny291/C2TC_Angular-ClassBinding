@@ -3,12 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+  <div style="text-align: center;">
+    <h1>Welcome to {{title}}</h1>
     <h1 class="stg">Mohith</h1>
     <h1 [class] = "classclo">Mohith</h1>
     <h1 class="sti" [class] = "classclo">Mohith</h1>
     <h1 [class.str] = "hasError">Mohith</h1>
     <h1 [ngClass] = "objclas">Mohith</h1>
-
+  </div>
   `,
   styles: [`
   .stg{
